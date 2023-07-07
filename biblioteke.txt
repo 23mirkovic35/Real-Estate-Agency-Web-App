@@ -1,0 +1,18 @@
+-----frontend-----
+ - grafikoni -
+npm i @swimlane/ngx-charts --save
+ - animacije -
+npm i @angular/animations@latest --save
+npm i @angular/cdk  --save
+-----backend-----
+npm init
+ -express-
+npm install express
+ - cors -
+npm install cors
+ - multer - 
+npm install multer --save
+ - nodemon -
+npm install -g nodemon
+ - mysql -
+npm install mysql ili npm install mysqljs/mysql ili npm install --save mysql2

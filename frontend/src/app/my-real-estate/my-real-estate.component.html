@@ -1,0 +1,54 @@
+<div class="help">
+    <div class="center">
+        <div *ngIf='!staticBooleanUpdate && !staticBooleanOffers'>
+            <div class="gallery" *ngFor='let re of arrayMyRealEstate; let i=index'>
+                <a>
+                  <img src="{{arrayImages[i]}}" alt="Cinque Terre" >
+                </a>
+                <div class="desc">
+                    <div class="description">{{re.description}}</div>
+                    <div class="basic-info">
+                        {{re.city}} - {{re.community}} - {{re.address}}
+                    </div>
+                    <div class="more-info">
+                        <div class="type">
+                            <div class="info-title">
+                                Tip nekretnine
+                            </div>
+                            <div class="info-value">
+                                {{arrayType[i]}}
+                            </div>
+                        </div>
+                        <div class="m2">
+                            <div class="info-title">
+                                Kvadratura
+                            </div>
+                            <div class="info-value">
+                                {{re.m2}}m<sup>2</sup>
+                            </div>
+                        </div>
+                        <div class="room-number">
+                            <div class="info-title">
+                                Broj soba
+                            </div>
+                            <div class="info-value">
+                                {{re.roomNumber}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price">
+                    {{re.price}}€
+                </div>
+                <button class="edit" (click)='updateRealEstate(i)'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                <button class="offers" (click)='showOffers(i)'> <i class="fa fa-eye" aria-hidden="true"></i></button>
+              </div>
+        </div>
+        <div class="real-estate-update" *ngIf='staticBooleanUpdate'>
+            <app-real-estate-update></app-real-estate-update>
+        </div>
+        <div class="real-estate-update" *ngIf='staticBooleanOffers'>
+            <app-real-estate-offer></app-real-estate-offer>
+        </div>
+    </div>
+</div>

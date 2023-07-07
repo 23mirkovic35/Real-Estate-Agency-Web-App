@@ -1,0 +1,55 @@
+<div class="menu-bar" *ngIf='homePage'>
+    <div *ngIf='logInSignUp'> 
+        <label class="login" (click)='login()'>Prijava</label>
+        <label class="signup" (click)='signup()'>Registracija</label>
+    </div>
+    <div class="back" *ngIf='admin' class="btn-back">
+        <button (click)='back()'><i class="fa fa-arrow-left" aria-hidden="true"></i> Povratak na kontrolni panel</button>
+    </div>
+</div>
+<div class="page" *ngIf='homePage'>
+    <div class="gallery-promoted" *ngIf='promoted'>
+        <div class="left" (click)='moveLeft()' >
+            <button id="pre"><i class="fa fa-arrow-left" id="icon-left" aria-hidden="true"></i></button>
+        </div>
+        <img src="{{promotedImageArray[i]}}" height="600px" width="1800px"  alt="" (click)='infoFromGallery(i)'>
+        <div class="info">
+            <p>{{arrayOfPromoted[i].description}}</p>
+        </div>
+        <div class="right" (click)='moveRight()'>
+            <button id="next"><i class="fa fa-arrow-right" aria-hidden="true" id="icon-right"></i></button>
+        </div>
+    </div>
+    <div class="search-bar">
+        <div class="params">
+            <div class="city">
+                <input type="text" name="" id="city" placeholder="grad" [(ngModel)]='city'>
+            </div>
+            <div class="price-param">
+                <input type="text" name="" id="min" placeholder="minimalna cena" [(ngModel)]='min'>
+                <input type="text" name="" id="max" placeholder="maksimalna cena" [(ngModel)]='max'>
+            </div>
+        </div>
+        <button (click)='search()'><i class="fa fa-search" aria-hidden="true"></i> Pretraga</button>
+        <div class="error-mess">
+            {{message}}
+        </div>
+    </div>
+    <div class="search-results">
+        <div class="gallery" *ngFor="let e of arrayResult; let i = index" (click)='infoFromSearch(e)'>
+            <img src="{{randomImageArray[i]}}" alt="">
+            <div class="desc">
+                <table>
+                    <tr>{{e.community}}, {{e.city}}</tr>
+                    <tr>{{e.price}}€</tr>
+                    <tr>{{houseFloorType[i]}}</tr>
+                    <tr>{{e.m2}}m<sup>2</sup></tr>
+                    <tr>{{arrayType[i]}}</tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="real-estate-info" *ngIf='info'>
+    <app-real-estate-info></app-real-estate-info>
+</div>

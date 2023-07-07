@@ -1,0 +1,162 @@
+nav{
+    width: 15%;
+    position: absolute;
+    bottom: 10%;
+    top: 93px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.6);
+}
+nav ul {
+    position: relative;
+    list-style-type: none;
+}
+nav ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 1.15em;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    height: 50px;
+    transition: all 0.5s ease;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+nav ul li a:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+nav ul ul{
+    position: absolute;
+    left:100%;
+    top: 0;
+    width: 250px;
+    display: none;
+    background: rgba(44,83,100,1);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+nav ul .dropdown span {
+    position: absolute;
+    right: 20px;
+}
+nav ul .dropdown img {
+    border-radius: 50%;
+    margin-right: 15px;
+}
+#icon-setting,
+#icon-logout,
+#icon-req,
+#icon-home,
+#icon-reg,
+#icon-re,
+#icon-pencil{
+    margin-right: 10px;
+}
+nav ul .dropdown{
+    position: relative;
+
+}
+nav ul .dropdown:hover ul{
+    display: initial;
+}
+.admin-container,
+.real-estate-requirements {
+    position: absolute;
+    left: 15%;
+    width: 85%;
+    top: 93px;
+    bottom: 10%;
+    overflow: auto;
+}
+div.gallery {
+    cursor: default;
+    background: white;
+    opacity: 0.4;
+    margin: 5px;
+    float: left;
+    width: 250px;
+    transition: all 0.4s ease;
+}
+  
+div.gallery:hover {
+    opacity: 1;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: 250px;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+.gallery button{
+    width: 50%;
+    height: 10%;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+.gallery button #icon-check{
+      color:green;
+}
+.gallery button #icon-cancle{
+    color:#740000;
+}
+
+.gallery button:hover{
+      background: rgba(0, 0, 0, 0.3);
+}
+.gallery button #icon-delete{
+    color:#740000;
+}
+.gallery button #icon-update{
+    color: royalblue;
+}
+
+.changing-container {
+    position: absolute;
+    left: 15%;
+    width: 85%;
+    top: 93px;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.setting-container,
+.real-estate-signup,
+.contracts,
+.percentage{
+    position: absolute;
+    left: 15%;
+    width: 85%;
+    top: 93px;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1200px) {
+    nav label{
+        display: none;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    nav ul {
+        width: 100%;
+    }
+    nav ul li{
+        width: 100%;
+    }
+    nav ul .dropdown img {
+        border-radius: 50%;
+        margin-left: -5px;
+    }
+}

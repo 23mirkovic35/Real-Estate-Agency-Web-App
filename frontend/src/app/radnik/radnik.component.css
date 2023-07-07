@@ -1,0 +1,157 @@
+nav{
+    position: relative;
+    z-index: 100;
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar a {
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 58px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    cursor: pointer;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  .dropdown img{
+      border-radius: 50%;
+  }
+  .dropdown .name {
+      padding-left: 10px;
+  }
+
+  #icon-down,
+  #icon-down-user{
+      padding-left: 10px;
+  }
+  #icon-building{
+      padding-right: 5px;
+  }
+.update{
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: 93px;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.real-estate-registartion{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.view-real-estate{
+  position: absolute;
+  bottom: 10%;
+  top: 150px;
+  right: 0%;
+  left: 0;
+  overflow: auto;
+}
+.view-real-estate::-webkit-scrollbar {
+  width: 12px;  
+}
+
+.view-real-estate::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.view-real-estate::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 20px;
+}
+.view-real-estate::-webkit-scrollbar-thumb:hover{
+  background-color: gray;
+}
+
+.dropdown-content i{
+  padding-right: 5px;
+}
+.offers{
+  position: absolute;
+  bottom: 10%;
+  top: 150px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+.inbox,
+.income{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,158 @@
+.images{
+    width: 550px;
+    height: 700px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+div.gallery {
+    margin: 5px;
+    float: left;
+    width: 250px;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: 250px;
+}
+
+.images::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.images::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+  
+.images::-webkit-scrollbar-thumb {
+    background-color: gray;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+.glass {
+    display: flex;
+}
+
+.glass .form{
+    width: 30vh;
+    height: 700px;
+    background: linear-gradient(45deg,rgba(255,255,255,0.3),rgba(255,255,255,0.7));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.selection {
+   display: flex;
+   justify-content: center;
+}
+.selection select{
+    width: 80%;
+}
+table input[type="file"],
+table input[type="radio"]{
+    display: none;
+}
+.radio-group{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid rgba(255,255,255,0.3);
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.radio-btns {
+    text-align: center;
+    margin: 2px;
+    border-radius: 5px;
+}
+.radio-btns label{
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.radio-btns  input[type="radio"]:checked + label{
+    background: white;
+    color: rgba(44,83,100,1);
+    border-radius: 5px;
+    padding: 5px;
+}
+table{
+    width: 90%;
+} 
+table tr td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 80%;
+}
+#radio1{
+    margin-right: 15px;
+}
+#files,
+#videos,
+#btn-confirm{
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(44,83,100,1);
+    width: 80%;
+    text-align: center;
+    color: white;
+    transition: all 0.4s ease;
+}
+#files:hover,
+#videos:hover,
+#btn-confirm:hover {
+    background:rgba(44,83,100,.3);
+}
+#confirm{
+    display: none;
+}
+input[type="text"],
+select{
+    border: none;
+    outline: none;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+input[type="text"]:hover,
+select:hover,
+input[type="text"]:focus,
+select:focus{
+    opacity: 1;
+}
+
+.radio-group-furnished{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.error{
+    color: #4d0000;
+    margin-top: 5px;
+    text-align: center;
+}
+@media only screen and (max-width: 986px) {
+    .images{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 666px) {
+    .images{
+        display: none;
+    }
+}

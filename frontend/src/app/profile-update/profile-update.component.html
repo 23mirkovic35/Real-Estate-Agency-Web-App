@@ -1,0 +1,101 @@
+<div class="glass">
+    <div class="image">
+        <label for="imageChange"><img [src]='url'  alt="Cinque Terre"></label>
+        <input type="file" (change)='onSelectFile($event)' accept="image/*" id="imageChange">
+    </div>
+    <table class="basic">
+        <tr>
+            <td class="label">
+                <input type="checkbox" [(ngModel)]='changeFirstNameUser' id="fname">
+                <label for="fname"> Ime:</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]='firstNameUser' name="firstName" disabled *ngIf='!changeFirstNameUser'>
+                <input type="text" [(ngModel)]='firstNameUser' name="firstName" *ngIf='changeFirstNameUser'>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <input type="checkbox" [(ngModel)]='changeLastNameUser' id="lname">
+                <label for="lname"> Prezime: </label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]='lastNameUser' name="lastName" disabled *ngIf='!changeLastNameUser'>
+                <input type="text" [(ngModel)]='lastNameUser' name="lastName" *ngIf='changeLastNameUser'>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <input type="checkbox" [(ngModel)]='changeUsernameUser' id="uname">
+                <label for="uname"> Korisničko ime: </label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]='usernameUser' name="username" disabled *ngIf='!changeUsernameUser'>
+                <input type="text" [(ngModel)]='usernameUser' name="username" *ngIf='changeUsernameUser'>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <input type="checkbox" [(ngModel)]='changeEmailUser' id="email">
+                <label for="email"> E-mail: </label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]='emailUser' name="email" disabled *ngIf='!changeEmailUser'>
+                <input type="text" [(ngModel)]='emailUser' name="email" *ngIf='changeEmailUser'>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <input type="checkbox" [(ngModel)]='changeCityUser' id="city">
+                <label for="city"> Grad:</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]='cityUser' name="city" disabled *ngIf='!changeCityUser'>
+                <input type="text" [(ngModel)]='cityUser' name="city" *ngIf='changeCityUser'>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <input type="checkbox" [(ngModel)]='changeCountryUser' id="country">
+                <label for="country">Država: </label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]='countryUser' name="country" disabled *ngIf='!changeCountryUser'>
+                <input type="text" [(ngModel)]='countryUser' name="country" *ngIf='changeCountryUser'>
+            </td>
+        </tr>
+    </table>
+    <label class="change-pass"(click)='setPassword()'>Promeni lozinku</label>
+    <table *ngIf='passwordChange'> 
+        <tr>
+            <td class="label">
+                <label>Stara lozinka: </label>
+            </td>
+            <td>
+                <input type="password" [(ngModel)]='oldPassword'>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <label>Nova lozinka: </label>
+            </td>
+            <td>
+                <input type="password" [(ngModel)]='newPassword'>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <label>Potvrda lozinke: </label>
+            </td>
+            <td>
+                <input type="password" [(ngModel)]='confirmPassword'>
+            </td>
+        </tr>
+    </table>
+    <label for="change" class="change-btn">Izmeni</label>
+    <button (click)='changeFunction()' id="change"></button>
+
+    <div class="error">
+        {{message}}
+    </div>
+</div>

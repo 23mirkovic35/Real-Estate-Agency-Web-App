@@ -1,0 +1,45 @@
+.charts{
+    position: absolute;
+    bottom: 10%;
+    top: 150px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+.charts .chart1,
+.charts .chart2,
+.charts .chart3{
+    position: relative;
+    left: 30%;
+    background: rgba(0, 0, 0, 0.3);
+    width: 40%;
+    height: 300px;
+}
+
+.title{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    width: 40%;
+    padding: 5px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+.charts::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.charts::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+  
+.charts::-webkit-scrollbar-thumb {
+    background-color: gray;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}

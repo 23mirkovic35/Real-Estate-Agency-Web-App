@@ -1,0 +1,119 @@
+.help{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.gallery {
+    position: relative;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 500px;
+    background: linear-gradient(-45deg, rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+}
+  
+div.gallery:hover {
+    border: 1px solid #777;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: 300px;
+}
+  
+div.desc {
+    padding: 15px;
+    height: 200px;
+}
+.desc .description{
+    font-size: 20px;
+    color: #003399;
+    font-weight: 600;
+}
+.price{
+    position: absolute;
+    top: 5px;
+    right: 0%;
+    background: rgb(44, 148, 44);
+    color: white;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    width: 100px;
+    text-align: center;
+    border-top-left-radius:5px;
+    border-bottom-left-radius: 5px;
+}
+.more-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.type,
+.m2,
+.room-number{
+    width: 33.33%;
+    padding: 10px;
+    background: rgba(255,255,255,0.3);
+}
+.type,
+.m2{
+    border-right: 1px solid rgba(255,255,255,0.5);
+}
+.type{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.room-number{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.info-title{
+    color: rgba(0, 0, 0, 0.3);
+}
+.info-value{
+    font-weight: 600;
+}
+.edit{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.edit:hover{
+    background: rgba(18, 79, 119, 0.7);
+}
+.offers{
+    position: absolute;
+    left: 52px;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.offers:hover{
+    background: rgba(134, 1, 1, 0.7);
+}

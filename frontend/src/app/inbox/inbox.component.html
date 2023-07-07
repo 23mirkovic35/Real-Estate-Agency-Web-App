@@ -1,0 +1,37 @@
+<div class="glass" *ngIf='inbox'>
+    <div class="buttons">
+        <div class="btn-new-msg">
+            <button (click)='newMessage()'><i class="fa fa-plus" aria-hidden="true"></i> Nova poruka</button>
+        </div>
+        <div class="btn-archive">
+            <button (click)='showArchive()'><i class="fa fa-archive" aria-hidden="true"></i> Arhivirane poruke</button>
+        </div>
+        <div class="btn-active">
+            <button (click)='showActive()'><i class="fa fa-toggle-on" aria-hidden="true"></i>Akivne poruke</button>
+        </div>
+    </div>
+    <div class="chats">
+        <div class="conversation" *ngFor='let c of conversations'>
+           <div class="container" (click)='showConversation(c)' [class.unseen]='!c.seen'>
+            <div class="conversation-title">
+                {{c.title}}
+            </div>
+            <div class="conversation-time">
+               <label class="ctitle">Vreme</label> <label class="cvalue">{{c.time}}</label>
+            </div>
+           </div>
+            <div class="btn-save"  *ngIf='showArchiveButton'>
+                <button (click)='arhive(c)'><i class="fa fa-star" aria-hidden="true"></i></button>
+            </div>
+            <div class="btn-remove"  *ngIf='!showArchiveButton'>
+                <button (click)='removeArhive(c)'><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="conversation" *ngIf='conversationPage'>
+    <app-contact></app-contact>
+</div>
+<div class="conversation" *ngIf='newMessagePage'>
+   <app-new-message></app-new-message>
+</div>

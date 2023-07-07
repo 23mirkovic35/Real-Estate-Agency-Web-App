@@ -1,0 +1,128 @@
+nav{
+    position: relative;
+    z-index: 100;
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  .dropdown img{
+      border-radius: 50%;
+  }
+  .dropdown .name {
+      padding-left: 10px;
+  }
+  #icon-down,
+  #icon-down-user{
+      padding-left: 10px;
+  }
+  #icon-building{
+      padding-right: 5px;
+  }
+  .update,
+  .real-estate-registration{
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top: 93px;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+.real-estate-registration{
+  margin-top: 50px;
+}
+.home,
+.inbox{
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: 20px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-help{
+  position: absolute;
+  bottom: 10%;
+  top: 150px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+.my-real-estate{
+  width: 85%;
+}

@@ -1,0 +1,341 @@
+.real-estate{
+    background: linear-gradient(-45deg, rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+    width: 1000px;
+    height: 500px;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    padding:5px;
+}
+.real-estate .price{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100px;
+    margin-top: 5px;
+    padding: 5px 10px 5px 5px;
+    background: green;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+}
+.real-estate .title{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.real-estate .title .desc{
+    font-size: 20px;
+    color: #003399;
+    font-weight: 600;
+}
+
+.real-estate .container{
+    margin-top: 5px;
+    display: flex;
+}
+
+.real-estate .container .info{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.real-estate .container .basic{
+    display: flex;
+    height: 100px;
+}
+
+.type, 
+.m2,
+.room-number{
+    background-color: rgba(255,255,255,0.3);
+    width: 140px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.type,
+.m2{
+    border-top: 1px solid rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.type{
+    border-left: 1px solid rgba(255,255,255,0.8);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.room-number{
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+    border-right: 1px solid rgba(255,255,255,0.8);
+    border-top: 1px solid rgba(255,255,255,0.8);
+    border-top-right-radius:5px;
+    border-bottom-right-radius: 5px;
+}
+
+.info-title {
+    color: rgba(0, 0, 0, 0.3);
+}
+.info-value{
+    font-weight: 600;
+}
+
+.more-info{
+    margin-top: 10px;
+    width: 420px;
+}
+
+.more-info table{
+    width: 420px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.8);
+    text-align: center;
+}
+
+.more-info table td{
+    padding:10px;
+}
+.ctitle{
+    color: rgba(0, 0, 0, 0.5) ;
+}
+.cvalue{
+    font-weight: 600;
+}
+.images{
+    position: relative;
+    margin-top: 30px;
+}
+.images .btn-left,
+.images .btn-right{
+    position: absolute;
+    height: 300px;
+    width: 50px;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.5) ;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+}
+.images .btn-left:hover,
+.images .btn-right:hover{
+    background: rgba(0, 0, 0, 0.2) ;
+}
+.images .btn-left{
+    top: 0;
+    left: 0;
+}
+.images .btn-right{
+    top: 0;
+    right: 0;
+}
+.images .buttons{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.images .buttons label{
+    width: 50%;
+    outline: none;
+    text-align: center;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding:5px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+.images .buttons input[type="radio"]{
+    display: none;
+}
+.images .buttons  input[type="radio"]:checked + label{
+    background: white;
+    color: rgba(44,83,100,1);
+    border-radius: 5px;
+    padding: 5px;
+}
+.imeges i,
+.buttons i{
+    padding-right:5px;
+}
+img{
+    border-radius: 5px;
+}
+.videos{
+    height: 300px;
+    width: 500px;
+    border: 1px solid rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+    border-radius:5px;
+}
+.message{
+    color: rgb(80, 4, 4);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact{
+    position: absolute;
+    top: 0;
+    right: 110px;
+    margin-top: 7px;
+}
+.contact button{
+    padding: 6px;
+    background: rgba(44,83,100,1);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color:white;
+    border-radius: 5px;
+    transition: all 0.6s ease;
+}
+.contact button i{
+    padding-right: 5px;
+}
+.contact button:hover{
+    background: rgba(44,83,100,0.5);
+}
+.rent{
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 5px;
+    width: 450px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rent input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius:5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.rent .date-from .from,
+.rent .date-to .to{
+    color: rgba(0, 0, 0, 0.5) ;
+    text-align: center;
+    padding: 5px;
+}
+
+.rent .btn-izdavanje{
+    padding: 5px;
+}
+
+.rent .btn-izdavanje button{
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius:5px ;
+    background: rgba(44,83,100,1);
+    color: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.rent .btn-izdavanje button:hover{
+    background: rgba(44,83,100,0.5);
+}
+.message-rent{
+    color: rgb(80, 4, 4);
+    text-align: center;
+}
+.sell{
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 5px;
+    width: 450px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sell .choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.sell .choose .cash,
+.sell .choose .credit-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.sell .choose .cash label,
+.sell .choose .credit-card label{
+    color: white;
+    border: 1px solid rgba(255,255,255,0.5);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition:  all 0.5s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sell .choose input{
+    display: none;
+}
+.sell .sell-type{
+    color: rgba(0, 0, 0, 0.5) ;
+    padding: 5px;
+}
+.sell .credit{
+    width: 60%;
+}
+.sell table{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.sell table td{
+    width: 50%;
+}
+.sell .choose .credit-card input[type='radio']:checked + label,
+.sell .choose .cash input[type='radio']:checked + label{
+    background: white;
+    color: rgba(44,83,100,1);
+}
+
+i{
+    padding-right: 5px;
+}
+.error-sell{
+    padding:5px;
+    color:rgb(148, 1, 1);
+    text-align: center;
+    font-weight: 600;
+}
+.contact-page{
+    position: absolute;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

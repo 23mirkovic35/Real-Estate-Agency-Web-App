@@ -1,0 +1,136 @@
+<div class="glass">
+    <div class="images">
+        <div class="gallery" *ngFor='let url of arrayOfUrls'>
+            <img src="{{url}}" alt="nema slike" >
+        </div>
+        <div class="gallery" *ngFor='let url of arrayOfUrlVideos'>
+            <video width="250px" height="250px"controls>
+                <source src="{{url}}" type="video/mp4">
+              </video>
+        </div>
+    </div>
+    <div class="form">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" placeholder="naziv nekretnine" [(ngModel)]='name'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="adresa" [(ngModel)]='address'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="opština" [(ngModel)]='community'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="grad" [(ngModel)]='city'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="kvadratura" [(ngModel)]='m2'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="broj soba" [(ngModel)]='roomNumber'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="cena" [(ngModel)]='price'>
+                </td>
+            </tr>
+            <tr>
+                <td class="selection">
+                    <select  id="type" [(ngModel)]='type' (change)="setFields()">
+                        <option value="stan">Stan</option>
+                        <option value="kuca">Kuća</option>
+                    </select>
+                </td>
+            </tr>
+            <tr *ngIf='floor'>
+                <td>
+                    <input type="text" placeholder="broj sprata" [(ngModel)]='floorNumber'>
+                </td>
+            </tr>
+            <tr *ngIf='floor'>
+                <td>
+                    <input type="text" placeholder="broj spratova zgrade" [(ngModel)]='buildingFloorNumber'>
+                </td>
+            </tr>
+            <tr *ngIf='house'>
+                <td>
+                    <input type="text" placeholder="broj spratova" [(ngModel)]='houseFloorNum'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <div class="radio-group">
+                        <div class="radio-btns" id="radio1">
+                            <input type="radio" id="prodaja" name="type" value="1" [(ngModel)]="sellRent">
+                            <label for="prodaja">Prodaja</label>
+                        </div>
+                        <div class="radio-btns">
+                            <input type="radio" id="izdavanje" name="type" value="0" [(ngModel)]='sellRent'>
+                            <label for="izdavanje">Izdavnje</label>
+                        </div>
+                   </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="radio-group-furnished">
+                        <div class="radio-btns" id="radio2">
+                            <input type="radio" id="nenamesten" name="furnished" value="0" [(ngModel)]='furnished'>
+                            <label for="nenamesten">Nenamešten</label>
+                        </div>
+                        <div class="radio-btns">
+                            <input type="radio" id="namesten" name="furnished" value="1" [(ngModel)]='furnished'>
+                            <label for="namesten">Namešten</label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr *ngIf='!isAgent && !isUser'>
+                <td class="selection">
+                    <select  id="owner" [(ngModel)]='owner' (change)='setOwner()' >
+                        <option value="korisnik">Korisnik</option>
+                        <option value="agencija">Agencija</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+               <td>
+                   <input type="text" placeholder="username" *ngIf='user' [(ngModel)]='username'>
+               </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="btn-files" id="files"><i class="fa fa-picture-o" aria-hidden="true"></i> Dodajte slike</label>
+                    <input type="file" id="btn-files" multiple accept="image/*" (change)='onSelectImages($event)'> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="btn-video" id="videos"><i class="fa fa-video-camera" aria-hidden="true"></i> Dodajte video zapis</label>
+                    <input type="file" id="btn-video" multiple accept="video/*" (change)='onSelectVideos($event)'> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="confirm" id="btn-confirm">Potvrdi</label>
+                    <button id="confirm" (click)='onConfirm()'></button>
+                </td>
+            </tr>
+        </table>
+        <div class="error">
+            {{message}}
+        </div>
+    </div>
+</div>

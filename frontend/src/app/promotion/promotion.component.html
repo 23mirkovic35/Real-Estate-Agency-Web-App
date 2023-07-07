@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="gallery" *ngFor="let re of arrayPromoted; let i=index">
+    <a>
+      <img src = "{{re.imagesPath}}">
+    </a>
+    <div class="desc">{{re.description}}</div>
+    <button class="btn-delete" (click)='delete(re.id)'><i class="fa fa-trash" aria-hidden="true"></i></button>
+  </div>
+  <div class="gallery" *ngFor="let re of arrayUnpromoted; let i=index">
+    <a>
+      <img src = "{{re.imagesPath}}">
+    </a>
+    <div class="desc">{{re.description}}</div>
+    <button class="btn-promotion" (click)='promotion(re.id)'><i class="fa fa-tag" aria-hidden="true"></i></button>
+  </div>
+</div>

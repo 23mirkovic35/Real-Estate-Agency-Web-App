@@ -1,0 +1,139 @@
+.center{
+    position: absolute;
+    top: 93px;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.center .home-page{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.center .home-page label{
+    cursor: pointer;
+}
+.center .home-page:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
+.center .home-page i{
+    padding-right: 5px;
+}
+.center .glass .title{
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(44,83,100,1);
+}
+.glass {
+    background: linear-gradient(45deg,rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+    border-radius: 20px;
+
+}
+.center .container{
+    display: flex;
+}
+.center .container .input-container{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+}
+.center .container .image{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 0%;
+}
+.center .container .image img{
+    border-radius: 10px;
+}
+.center .container .input-container input{
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    outline:none;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+.center .glass .image .image-button input[type='file']{
+    display: none;
+}
+.center .glass .image .image-button{
+    text-align: center;
+    margin-top: 3px;
+}
+.center .glass .image .image-button label{
+    color: white;
+    background: rgba(44,83,100,1);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.center .glass .image .image-button label:hover{
+    background: rgba(44,83,100,0.6);
+}
+.center .glass .image .image-button label i{
+    padding-right: 1px;
+}
+.glass .btn-signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.glass .btn-signup button{
+    padding: 5px;
+    width: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: lowercase;
+    color: white;
+    border-radius: 5px;
+    background: rgba(44,83,100,1);
+    font-size: 15px;
+    transition: all 0.4s ease;
+}
+.glass .btn-signup button:hover{
+    background: rgba(44,83,100,0.6);
+}
+.error{
+    text-align: center;
+    color:#4d0000;
+    padding: 5px;
+    font-size: 15px;
+    width: 410px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+}
+.login label{
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 600;
+    color:#2C5364;
+    transition: 1s all linear;
+}
+.login label:hover{
+    color: #0F2027;
+    text-decoration: underline;
+}

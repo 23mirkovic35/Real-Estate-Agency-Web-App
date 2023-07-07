@@ -1,0 +1,17 @@
+<div class="glass" *ngIf='!showConversationPage'>
+    <div class="for">
+        <label> <i class="fa fa-at" aria-hidden="true"></i></label>
+        <select  [(ngModel)]='username' name="select" (change)='next()'>
+            <option value="{{user}}" *ngFor='let user of usernames'> {{user}}</option>
+        </select >
+    </div>
+    <div class="real-estate" *ngIf='showRE'>
+        <label>Izaberite naslov</label>
+        <select  [(ngModel)]='realEstate' name="selectRE" (change)='sendMessage()'>
+            <option value="{{re.description}}" *ngFor='let re of realEstates'> {{re.description}}</option>
+        </select >
+    </div>
+</div>
+<div class="conversation" *ngIf='showConversationPage'>
+    <app-contact></app-contact>
+</div>

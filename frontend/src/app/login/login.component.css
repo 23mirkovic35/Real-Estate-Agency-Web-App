@@ -1,0 +1,138 @@
+.center{
+    position: absolute;
+    top: 93px;
+    bottom: 10%;
+    left: 0;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center .home-page{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.center .home-page label{
+    cursor: pointer;
+}
+.center .home-page:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
+.center .home-page i{
+    padding-right: 5px;
+}
+.center .glass{
+    background: linear-gradient(45deg,rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+    width: 350px;
+    border-radius: 15px;
+}
+.center .title{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px;
+    color: rgba(44,83,100,1);
+}
+.center .glass .input-username,
+.center .glass .input-pass{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center .glass .input-username{
+    margin-top: 10px;
+}
+.center .glass .input-username input,
+.center .glass .input-pass input{
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+    outline: none;
+    border: none;
+    width: 80%;
+    transition: all 0.5s ease;
+}
+.center .glass .input-username input:hover,
+.center .glass .input-pass input:hover,
+.center .glass .input-username input:focus,
+.center .glass .input-pass input:focus{
+    background: white;
+}
+.center .glass .type{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center .glass .type .type-title{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    width: 30%;
+}
+.center .glass .type .selection{
+    width: 48%;
+}
+.center .glass .type select{
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.center .glass .btn-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.center .glass .btn-login button{
+    background: rgba(44,83,100,1);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-transform: lowercase;
+    font-size: 15px;
+    padding: 5px;
+    width: 50%;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.center .glass .btn-login button:hover{
+    background: rgba(44,83,100,0.6);
+}
+.center .glass .signup{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center .glass .signup label {
+    color:#2C5364;
+    font-weight: 600;
+    font-size: 19px;
+    transition: 2s all linear;
+    cursor: pointer;
+}
+.center .glass .signup label:hover{
+    color: black;
+    text-decoration: underline;
+}
+.error-message{
+    text-align: center;
+    color:#4d0000;
+    padding: 5px;
+    font-size: 15px;
+}

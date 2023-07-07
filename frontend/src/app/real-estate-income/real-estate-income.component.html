@@ -1,0 +1,24 @@
+<div class="glass">
+    <div class="contracts">
+       <table>
+           <tr *ngFor='let c of contracts;let i=index'>
+                <td>{{c.description}}</td>
+                <td>{{c.city}}</td>
+                <td>{{c.community}}</td>
+                <td>{{c.address}}</td>
+                <td>{{c.m2}}m<sup>2</sup></td>
+                <td>{{c.price}}€</td>
+                <td>{{sellRent[i]}}</td>
+                <td>{{usernames[i]}}</td>
+           </tr>
+       </table>
+    </div> 
+    <div class="income">
+        <table>
+            <tr>
+                <td class="ctitle">Ukupan prihod agencije</td>
+                <td class="cvalue">{{totalIncome}}€</td>
+            </tr>
+        </table>
+    </div>   
+</div>

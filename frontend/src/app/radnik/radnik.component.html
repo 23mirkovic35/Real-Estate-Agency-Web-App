@@ -1,0 +1,66 @@
+<nav>
+    <div class="navbar">
+        <a (click)='home()'><i class="fa fa-home" aria-hidden="true"></i> Početna</a>
+        <a (click)='inbox()'><i class="fa fa-inbox" aria-hidden="true"></i> Inbox</a>
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fa fa-building" aria-hidden="true" id="icon-building"></i>Nekretnine  
+            <i class="fa fa-caret-down" id="icon-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a (click)='realEstateRegistration()'> <i class="fa fa-plus" aria-hidden="true"></i> Registracija</a>
+            <a (click)='promotion()'> <i class="fa fa-tag" aria-hidden="true"></i> Promovisanje</a>
+            <a (click)='view()'><i class="fa fa-eye" aria-hidden="true"></i> Pregled</a>
+            <a (click)='realEstateRequest()'> <i class="fa fa-paper-plane" aria-hidden="true"></i> Zahtevi</a>
+            <a (click)='charts()'><i class="fa fa-bar-chart" aria-hidden="true"></i> Grafikoni</a>
+            <a (click)='offers()'><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ponude</a>
+            <a (click)='income()'><i class="fa fa-money" aria-hidden="true"></i> Ugovori i ukupni prihodi</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="{{url}}" height="30px" width="30px">
+                <div class="name">
+                    {{firstName}}
+                </div>  
+              <i class="fa fa-caret-down" id="icon-down-user"></i>
+            </button>
+            <div class="dropdown-content">
+              <a (click)='change()'><i class="fa fa-cog" aria-hidden="true" id="icon-setting"></i> Podešavanja</a>
+              <a (click)='logout()'> <i class="fa fa-sign-out" aria-hidden="true" id="icon-logout"></i> Odjavi se</a>
+            </div>
+          </div> 
+      </div>
+</nav>
+<div class="charts" *ngIf='chartPage'>
+    <app-charts></app-charts>
+</div>
+<div class="home" *ngIf="homePage">
+    <app-home></app-home>
+</div>
+<div class="update" *ngIf='updatePage'>
+    <app-profile-update></app-profile-update>
+</div>
+<div class="real-estate-requests" *ngIf='realEstateRequestPage'>
+    <app-real-estate-requirements></app-real-estate-requirements>
+</div>
+<div class="real-estate-registartion" *ngIf='realEstateRegistrationPage'>
+    <app-real-estate-registration></app-real-estate-registration>
+</div>
+<div class="promotion" *ngIf='promotionPage'>
+    <app-promotion></app-promotion>
+</div>
+<div class="view-real-estate" *ngIf='viewPage'>
+  <app-view-real-estate></app-view-real-estate>
+</div>
+<div class="offers" *ngIf='offersPage'>
+  <app-my-real-estate></app-my-real-estate>
+</div>
+<div class="income" *ngIf='incomePage'>
+  <app-real-estate-income></app-real-estate-income>
+</div>
+
+<div class="help" *ngIf='inboxPage'>
+  <div class="inbox" >
+    <app-inbox></app-inbox>
+  </div>
+</div>

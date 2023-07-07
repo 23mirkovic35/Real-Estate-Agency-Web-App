@@ -1,0 +1,16 @@
+<div class="gallery" *ngFor="let e of realEstateRequirementsArray; let i = index">
+    <img src="{{randomImageArray[i]}}" alt="">
+    <div class="desc">
+        <table>
+            <tr>{{e.community}}, {{e.city}}</tr>
+            <tr>{{e.price}}€</tr>
+            <tr>{{houseFloorType[i]}}</tr>
+            <tr>{{e.m2}}m<sup>2</sup></tr>
+            <tr>{{arrayType[i]}}</tr>
+        </table>
+    </div>
+    <div class="buttons">
+        <button class="accept" (click)='accept(e.id)'><i class="fa fa-check" aria-hidden="true" id="accept"></i></button>
+        <button class="refuse" (click)='refuse(e.id)'><i class="fa fa-times" aria-hidden="true" id="refuse"></i></button>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+.container .conversation-messages{
+    width: 650px;
+    height: 500px;
+    padding: 10px;
+    background: linear-gradient(45deg,rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.conversation-messages::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.conversation-messages::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+  
+.conversation-messages::-webkit-scrollbar-thumb {
+    background-color: gray;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+.container .title{
+    background: rgba(0, 126, 243, 0.459);
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.container .send-message{
+    margin-top: 5px;
+    padding: 5px;
+    display: flex;
+    background: rgba(0, 126, 243, 0.459);
+    border-radius: 5px;
+}
+.container .conversation-messages .msg-from{
+    background: rgba(0, 126, 243, 0.459);
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    color: white;
+}
+.help{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    width: 100%;
+}
+.container .conversation-messages .msg-to{
+    margin-top: 5px;
+    background: rgba(117, 5, 108, 0.459);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.container .conversation-messages .msg-to label{
+
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+}
+.container .send-message .btn-send,
+.container .send-message .btn-offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+.container .send-message .btn-send button,
+.container .send-message .btn-offer button{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.container .send-message .btn-send button:hover,
+.container .send-message .btn-offer button:hover{
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+.container .send-message .input-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .send-message .input-text textarea{
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+    transition: all 0.4s ease;
+}
+.container .send-message .input-text textarea:hover,
+.container .send-message .input-text textarea:focus{
+    background: white;
+}
+.new-help{
+    width: 100%;
+}
+.buttons{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .buttons .btn-offer{
+    margin-top: 3px;
+}
+.time{
+    text-align: end;
+    font-size: 10px;
+}
+.time label{
+    background: rgba(0,0,0,0.3);
+    color: red;
+}

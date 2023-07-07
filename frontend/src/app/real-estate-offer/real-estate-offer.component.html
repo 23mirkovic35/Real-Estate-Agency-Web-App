@@ -1,0 +1,56 @@
+<div class="glass">
+    <div class="message">{{message}}</div>
+    <table *ngIf='show'>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Korisničko ime</th>
+            <th>Način plaćanja</th>
+        </tr>
+        <tr *ngFor='let o of offers'>
+            <td>{{o.firstName}}</td>
+            <td>{{o.lastName}}</td>
+            <td>{{o.username}}</td>
+            <td>{{o.type}}</td>
+            <td>
+                <div class="btn">
+                    <div class="accept"> 
+                        <button (click)='accept(o.id, o.idB)'><i class="fa fa-check" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="refuse">
+                        <button (click)='refuse(o.id)'><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table *ngIf='rent'>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Korisničko ime</th>
+            <th>Početak</th>
+            <th>Kraja</th>
+            <th></th>
+        </tr>
+        <tr *ngFor='let o of offers'>
+            <td>{{o.firstName}}</td>
+            <td>{{o.lastName}}</td>
+            <td>{{o.username}}</td>
+            <td>{{o.start}}</td>
+            <td>{{o.end}}</td>
+            <td>
+                <div class="btn">
+                    <div class="accept"> 
+                        <button (click)='accept(o.id, o.IdB)'><i class="fa fa-check" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="refuse">
+                        <button (click)='refuse(o.id)'><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

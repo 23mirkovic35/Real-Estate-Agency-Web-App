@@ -1,0 +1,45 @@
+<nav>
+    <div class="navbar">
+        <a (click)='home()'><i class="fa fa-home" aria-hidden="true"></i> Početna</a>
+        <a (click)='showInbox()'><i class="fa fa-inbox" aria-hidden="true"></i>  inbox</a>
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fa fa-building" aria-hidden="true" id="icon-building"></i>Nekretnine  
+            <i class="fa fa-caret-down" id="icon-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a (click)='signUp()'> <i class="fa fa-plus" aria-hidden="true"></i> Registruj nekretninu</a>
+            <a (click)='myRealEstate()'><i class="fa fa-folder-open-o" aria-hidden="true"></i> Moje nekretnine</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="{{url}}" height="30px" width="30px">
+                <div class="name">
+                    {{firstName}}
+                </div>  
+              <i class="fa fa-caret-down" id="icon-down-user"></i>
+            </button>
+            <div class="dropdown-content">
+              <a (click)='update()'><i class="fa fa-cog" aria-hidden="true" id="icon-setting"></i> Podešavanja</a>
+              <a (click)='logout()'> <i class="fa fa-sign-out" aria-hidden="true" id="icon-logout"></i> Odjavi se</a>
+            </div>
+          </div> 
+      </div>
+</nav>
+<div *ngIf='homebutton' class="home">
+  <app-home></app-home>
+</div>
+<div *ngIf='updateUser' class="update">
+  <app-profile-update></app-profile-update>
+</div>
+<div class="real-estate-registration" *ngIf='registration'>
+  <app-real-estate-registration ></app-real-estate-registration>
+</div>
+<div class="inbox" *ngIf='inboxPage'>
+  <app-inbox></app-inbox>
+</div>
+<div class="div-help" *ngIf='myRE'>
+  <div class="my-real-estate" >
+    <app-my-real-estate updateRe = 'true'></app-my-real-estate>
+  </div>
+</div>

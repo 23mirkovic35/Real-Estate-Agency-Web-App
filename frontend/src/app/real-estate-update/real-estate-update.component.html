@@ -1,0 +1,190 @@
+<div class="glass">
+    <div class="title">
+        <div class="description">
+            <label for="" *ngIf='!changeDescription'>{{description}}</label>
+            <input type="text" id="desc" size="{{description.length+5}}" [(ngModel)]='description' *ngIf='changeDescription'>
+            <button (click)='changeDescriptionFun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+        </div>
+        <div class="basic-info">
+            <label for="" *ngIf='!changeBasicInfo'>{{city}}</label>
+            <input type="text" size="{{city.length}}" id="city" [(ngModel)]='city' *ngIf='changeBasicInfo'>
+            -
+            <label for="" *ngIf='!changeBasicInfo'>{{community}}</label>
+            <input type="text" size="{{community.length}}" id="community" [(ngModel)]='community' *ngIf='changeBasicInfo'>
+            -
+            <label for="" *ngIf='!changeBasicInfo'>{{address}}</label>
+            <input type="text" size="{{address.length}}" id="address" [(ngModel)]='address' *ngIf='changeBasicInfo'>
+            <button (click)='changeBasicInfoFun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div class="price">
+        <div class="btn-edit">
+            <button (click)='changePriceFun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+        </div>
+        <div class="value">
+            <label for="" *ngIf='!changePrice'>{{price}}€</label>
+            <input type="text" size="{{city.length}}" id="city" [(ngModel)]='price' *ngIf='changePrice'>
+        </div>
+    </div>
+    <div class="container">
+        <div class="preview">
+            <div class="pictures" *ngIf='showImageVideo'>
+                <img src="{{images[imageCnt]}}" alt="" height="300px" width="500px">
+                <button (click)='moveLeftImage()' class="left"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                <button (click)='moveRightImage()' class="right"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="videos" *ngIf='!showImageVideo'>
+                <video src="{{videos[videoCnt]}}" width="500px" height="300px"  autoplay></video>
+                <button class="left" (click)='moveLeftVideo()' *ngIf='videos'><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                <button class="right" (click)='moveRightVideo()' *ngIf='videos'><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="show-image-video">
+                <input type="radio" name="choose" id="images">
+                <label for="images" (click)='showImage()'><i class="fa fa-picture-o" aria-hidden="true"></i>Slike</label>
+                <input type="radio" name="choose" id="videos">
+                <label for="videos" (click)='showVideo()' ><i class="fa fa-video-camera" aria-hidden="true"></i>Video zapisi</label>
+            </div>
+            <div class="buttons">
+                <label for="btn-files" id="files"><i class="fa fa-picture-o" aria-hidden="true"></i> Dodajte slike</label>
+                <input type="file" id="btn-files" multiple accept="image/*" (change)='onSelectImages($event)'>
+                <label for="btn-files-videos"><i class="fa fa-video-camera" aria-hidden="true"></i> Dodaj video </label>
+                <input type="file" id="btn-files-videos" multiple accept="video/*" (change)='onSelectVideo($event)'>
+                <label (click)='updateRealEstate()'><i class="fas fa-pen"></i> Izmeni</label>
+            </div>
+
+        </div>
+        <div class="more-info">
+            <div class="basic">
+                <div class="type">
+                    <div class="info-title">
+                        Tip nekretnine
+                    </div>
+                    <div class="info-value">
+                        {{type}}
+                    </div>
+                </div>
+                <div class="m2">
+                    <div class="info-title">
+                        Kvadratura
+                    </div>
+                    <div class="info-value">
+                        <label for="" *ngIf='!changeM2'>{{m2}}m<sup>2</sup></label>
+                        <input type="text" id="m2" [(ngModel)]='m2' *ngIf='changeM2'>
+                        <button (click)='changeM2Fun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="room-number">
+                    <div class="info-title">
+                        Broj soba
+                    </div>
+                    <div class="info-value">
+                        <label for="" *ngIf='!changeRoomNumber'>{{roomNumber}}</label>
+                        <input type="text" id="roomNumber" [(ngModel)]='roomNumber' *ngIf='changeRoomNumber'>
+                        <button (click)='changeRoomNumberFun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+        </div>
+        <div class="container-info">
+            <div class="table">
+                <table>
+                    <tr>
+                        <td class="ctitle">Vlasnik</td>
+                        <td class="cvalue">{{owner}}</td>
+                    </tr>
+                    <tr *ngIf='apartman'>
+                        <td class="ctitle">Sprat</td>
+                        <td class="cvalue">
+                            <label for="" *ngIf='!changeFloor'>{{floor}}</label>
+                            <input type="text" id="floor" [(ngModel)]='floor' *ngIf='changeFloor'>
+                            <button (click)='changeFloorFun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                    <tr  *ngIf='apartman'>
+                        <td class="ctitle">Ukupna spratnost</td>
+                        <td class="cvalue">
+                            <label for="" *ngIf='!changeTotalFloors'>{{totalFloors}}</label>
+                            <input type="text" id="totalFloors" [(ngModel)]='totalFloors' *ngIf='changeTotalFloors'>
+                            <button (click)='changeTotalFloorsFun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                    <tr  *ngIf='!apartman'>
+                        <td class="ctitle">Broj spratova</td>
+                        <td class="cvalue">
+                            <label for="" *ngIf='!changeHouseFloor'>{{houseFloors}}</label>
+                            <input type="text" id="houseFloors" [(ngModel)]='houseFloors' *ngIf='changeHouseFloor'>
+                            <button (click)='changeHouseFloorsFun()'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                    <tr *ngIf='equipped' class="furnished">
+                        <td colspan="2">
+                            <div class="container-furnished">
+                                <div class="equipped">
+                                    <input type="radio" name="equipped" id="equipped" checked>
+                                    <label for="equipped" (click)='changeFurnished(true)'>Namešteno</label>
+                                </div>
+                                <div class="unequipped">
+                                    <input type="radio" name="equipped" id="unequipped">
+                                    <label for="unequipped" (click)='changeFurnished(false)'>Nenamešteno</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr *ngIf='unequipped' class="furnished">
+                        <td colspan="2">
+                            <div class="container-furnished">
+                                <div class="equipped">
+                                    <input type="radio" name="equipped" id="equipped">
+                                    <label for="equipped" (click)='changeFurnished(true)'>Namešteno</label>
+                                </div>
+                                <div class="unequipped">
+                                    <input type="radio" name="equipped" id="unequipped" checked>
+                                    <label for="unequipped" (click)='changeFurnished(false)'>Nenamešteno</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr class="sellOrRent" *ngIf='sell'>
+                        <td colspan="2">
+                            <div class="container-sellRent">
+                                <div class="sell">
+                                    <input type="radio" name="sell" id="sell" checked>
+                                    <label for="sell" (click)='changeSellRent(true)'>Prodaja</label>
+                                </div>
+                                <div class="rent">
+                                    <input type="radio" name="sell" id="rent">
+                                    <label for="rent" (click)='changeSellRent(false)'>Izdavanje</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="sellOrRent" *ngIf='rent'>
+                        <td colspan="2">
+                            <div class="container-sellRent">
+                                <div class="sell">
+                                    <input type="radio" name="rent" id="sell" >
+                                    <label for="sell" (click)='changeSellRent(true)'>Prodaja</label>
+                                </div>
+                                <div class="rent">
+                                    <input type="radio" name="rent" id="rent" checked>
+                                    <label for="rent" (click)='changeSellRent(false)'>Izdavanje</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>   
+                </table>
+                <div class="error">{{message}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="new-images-videos" *ngIf='imagesFile || videoFile'>
+   <div class="new-images">
+        <div class="gallery" *ngFor='let image of arrayOfImagesUrl'>
+            <img src="{{image}}" height="250px" width="400px" alt="">
+        </div>
+        <div class="gallery" *ngFor='let video of arrayOfVideoUrl'>
+            <video src="{{video}}" controls height="250px" width="400px"></video>
+        </div>
+   </div>
+</div>

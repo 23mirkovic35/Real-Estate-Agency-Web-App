@@ -1,0 +1,54 @@
+.glass{
+    background: linear-gradient(45deg,rgba(255,255,255,0.5),rgba(255,255,255,0.8));
+    padding: 10px;
+    border-radius:5px;
+}
+.glass .contracts{
+    display: flex;
+    padding: 10px;
+    background: linear-gradient(45deg,rgba(255,255,255,0.5),rgba(255,255,255,0.8));
+    margin-top: 5px;
+    border-radius: 5px;
+    max-height: 250px;
+    overflow: auto;
+}
+.glass .contracts table{
+    padding: 20px;
+    text-align: center;
+}
+table td{
+    padding: 10px;
+}
+.glass .income{
+    margin-top: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.glass .income table{
+    background: rgba(44,83,100,1);
+    border-radius: 5px;
+}
+.glass .income table td{
+    padding: 5px;
+}
+.glass .income table .ctitle{
+    color: rgba(255,255,255,0.5);
+}
+.glass .income table .cvalue{
+    color: rgb(255,255,255);
+    font-weight: 600;
+}
+
+.contracts::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.contracts::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+  
+.contracts::-webkit-scrollbar-thumb {
+    background-color: gray;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}

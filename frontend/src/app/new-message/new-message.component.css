@@ -1,0 +1,54 @@
+.glass{
+    padding: 10px;
+    background: linear-gradient(45deg,rgba(255,255,255,0.5),rgba(255,255,255,0.8));
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.glass .for,
+.glass .real-estate{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass .real-estate label,
+.glass .real-estate select,
+.glass .for label,
+.glass .for select{
+    padding: 10px;
+}
+
+.glass .real-estate select,
+.glass .for select{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 90%;
+    background: rgba(255,255,255,0.3);
+    transition: all 0.4s ease;
+}
+
+.glass .real-estate select:hover,
+.glass .for select:hover{
+    background: white;
+}
+.glass .for label,
+.glass .real-estate label{
+    background: rgba(0, 0, 0, 0.192);
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.glass .real-estate label{
+    font-size: 15px;
+}
+.glass .real-estate select{
+    width: 75%;
+}

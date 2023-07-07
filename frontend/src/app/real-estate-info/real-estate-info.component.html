@@ -1,0 +1,131 @@
+<div class="real-estate" *ngIf='!contactPage'>
+    <div class="title">
+        <div class="desc">
+            {{description}}
+        </div>
+        <div class="basic-info">
+            {{city}} - {{community}} - {{address}} 
+        </div>
+    </div>
+    <div class="price">
+        {{price}}€
+    </div>
+    <div class="contact">
+        <button (click)='contact()'><i class="fa fa-phone" aria-hidden="true"></i>Kontakt</button>
+    </div>
+    <div class="container">
+        <div class="images">
+            <div class="pictures" *ngIf='showImageVideo'>
+                <img src="{{arrayImages[i]}}" height="300px" width="500px" alt="">
+                <button class="btn-left" (click)='moveLeft()'><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                <button class="btn-right" (click)='moveRight()'><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="videos" *ngIf='!showImageVideo'>
+                <video [src]="arrayVideos[j]" width="500px" height="300px"  autoplay *ngIf='videos'></video>
+                <button class="btn-left" (click)='moveLeftVideo()' *ngIf='videos'><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                <button class="btn-right" (click)='moveRightVideo()' *ngIf='videos'><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <div class="message" *ngIf='!videos'>{{message}}</div>
+            </div>
+            <div class="buttons">
+                <input type="radio" name="choose" id="images">
+                <label for="images" (click)='showImage()'><i class="fa fa-picture-o" aria-hidden="true"></i>Slike</label>
+                <input type="radio" name="choose" id="videos">
+                <label for="videos" (click)='showVideo()'><i class="fa fa-video-camera" aria-hidden="true"></i>Video zapisi</label>
+            </div> 
+            <div class="error-sell">
+                {{messageSell}}
+            </div>
+        </div>
+        <div class="info">
+           <div class="basic">
+                <div class="type">
+                    <div class="info-title">
+                        Tip nekretnine
+                    </div>
+                    <div class="info-value">
+                        {{type}}
+                    </div>
+                </div>
+                <div class="m2">
+                    <div class="info-title">
+                        Kvadratura
+                    </div>
+                    <div class="info-value">
+                        {{m2}}m<sup>2</sup>
+                    </div>
+                </div>
+                <div class="room-number">
+                    <div class="info-title">
+                        Broj soba
+                    </div>
+                    <div class="info-value">
+                        {{roomNumber}}
+                    </div>
+                </div>
+           </div>
+           <div class="more-info">
+                <table>
+                    <tr>
+                        <td class="ctitle">Vlasnik</td>
+                        <td class="cvalue">{{owner}}</td>
+                    </tr>
+                    <tr *ngIf='apartman'>
+                        <td class="ctitle">Sprat</td>
+                        <td class="cvalue">{{floor}}</td>
+                    </tr>
+                    <tr *ngIf='apartman'>
+                        <td class="ctitle">Ukupna spratnost</td>
+                        <td class="cvalue">{{totalFloors}}</td>
+                    </tr>
+                    <tr *ngIf='!apartman'>
+                        <td class="ctitle">Broj spratova</td>
+                        <td>{{houseFloors}}</td>
+                    </tr>
+                    <tr>
+                        <td class="ctitle">Nameštenost</td>
+                        <td class="cvalue">{{furnished}}</td>
+                    </tr>
+                </table>
+           </div>
+           <div class="rent" *ngIf='!sellOrRent'>
+                <div class="date-from">
+                    <div class="from">Datum početka</div>
+                    <div class="date-picker">
+                        <input type="date" name="dateFrom" [(ngModel)]='dateFrom'>
+                    </div>
+                </div>
+                <div class="date-to">
+                    <div class="to">Datum kraja</div>
+                    <div class="date-picker">
+                        <input type="date" name="dateTo" [(ngModel)]='dateTo'>
+                    </div>
+                </div>
+           </div>
+           <div class="sell" *ngIf='sellOrRent'>
+                <div class="sell-type">Način plaćanja</div>
+                <div class="choose">
+                    <div class="credit-card">
+                        <input type="radio" name="sell" value="gotovina" id="gotovina" [(ngModel)]='typeOfPay'>
+                        <label for="gotovina" (click)='hideProc()'><i class="fa fa-money" aria-hidden="true"  ></i> Gotovina</label>
+                    </div>
+                    <div class="cash">
+                        <input type="radio" name="sell" value="kredit" id="kredit" [(ngModel)]='typeOfPay' >
+                        <label for="kredit"  (click)='showProc()'><i class="fa fa-credit-card" aria-hidden="true" ></i> Kredit</label>
+                    </div>
+                </div>
+                <div class="credit" *ngIf='credit'>
+                    <table>
+                        <tr>
+                            <td class="ctitle">Iznos učešća </td>
+                            <td class="cvalue">{{participation}}€</td>
+                        </tr>
+                    </table>
+                </div>
+           </div>
+           <div class="message-rent">{{messageRent}}</div>
+        </div>
+    </div>
+</div>
+<div class="contact-page" *ngIf='contactPage'>
+    <app-contact></app-contact>
+</div>

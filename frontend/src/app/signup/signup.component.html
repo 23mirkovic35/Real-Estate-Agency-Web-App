@@ -1,0 +1,52 @@
+<div class="center">
+    <div class="home-page" *ngIf='homeButtonShow' (click)='homePage()'>
+        <label><i class="fa fa-home" aria-hidden="true"></i> Početna</label>
+    </div>
+    <div class="glass">
+        <div class="title"><label> Registracija</label></div>
+        <div class="container">
+            <div class="input-container">
+                <div class="input-first-name">
+                    <input type="text" name="fname" [(ngModel)]='firstName' placeholder="ime">
+                </div>
+                <div class="input-last-name">
+                    <input type="text" name="lname" [(ngModel)]='lastName' placeholder="prezime">
+                </div>
+                <div class="input-username">
+                    <input type="text" name="username" [(ngModel)]='username' placeholder="korisničko ime">
+                </div>
+                <div class="input-city">
+                    <input type="text" name="city" [(ngModel)]='city' placeholder="grad">  
+                </div>
+                <div class="input-country">
+                    <input type="text" name="country" [(ngModel)]='country' placeholder="država">
+                </div>
+                <div class="input-email">
+                    <input type="text" name="email" [(ngModel)]='email' placeholder="e-mail">
+                </div>
+                <div class="input-password">
+                    <input type="password" name="password" [(ngModel)]='password' placeholder="lozinka">
+                </div>
+                <div class="input-password">
+                    <input type="password" name="cpass" [(ngModel)]='confirmPassword' placeholder="potvrda lozinke">
+                </div>
+            </div>
+            <div class="image">
+                <img [src]="url" height="300px" width="200px">
+                <div class="image-button">
+                    <label for="imageUpload"><i class="fa fa-picture-o" aria-hidden="true"></i> Izaberite profilnu sliku</label>
+                    <input accept="image/*" (change)='onSelectFile($event)' type="file" id="imageUpload">
+                </div>
+            </div>    
+        </div>
+        <div class="login" *ngIf='homeButtonShow'>
+            <label (click)='login()'>Imate nalog? Prijavite se</label>
+        </div>
+        <div class="btn-signup">
+            <button (click)="signup(0)" *ngIf='basicUser'>Registracija</button>
+            <button (click)="signup(1)" *ngIf='basicUserAdmin'>Registracija</button>
+            <button (click)="signup(2)" *ngIf='workerAdmin'>Registracija</button>
+        </div>
+        <div class="error">{{message}}</div>
+    </div>
+</div>

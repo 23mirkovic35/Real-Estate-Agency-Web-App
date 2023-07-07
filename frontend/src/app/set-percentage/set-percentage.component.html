@@ -1,0 +1,23 @@
+<div class="glass">
+    <div class="for-rent">
+        <div class="field">
+            <input type="text" name="rent" placeholder="procenat za izdavanje" [(ngModel)]='rent'>
+            <label>%</label>
+        </div>
+        <div class="btn-change">
+            <button (click)='setRent()'>Promeni</button>
+        </div>
+    </div>
+    <div class="for-sell">
+        <div class="field">
+            <input type="text" name="rent" placeholder="procenat za prodaju" [(ngModel)]='sell'>
+            <label>%</label>
+        </div>
+        <div class="btn-change">
+            <button (click)='setSell()'>Promeni</button>
+        </div>
+    </div>
+    <div class="message">
+        {{message}}
+    </div>
+</div>

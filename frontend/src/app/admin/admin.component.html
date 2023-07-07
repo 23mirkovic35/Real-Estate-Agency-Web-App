@@ -1,0 +1,84 @@
+<div class="admin-container" *ngIf='requirements'>
+    <div class="gallery" *ngFor='let r of arrayOfRequirements; let i = index'>
+        <img src='{{ "../../assets/uploads/users/" + r.imagePath}}'  alt="Cinque Terre" width="100" height="100">
+        <div class="desc">
+            {{r.firstName}} {{r.lastName}} <br/>
+            {{r.username}} <br/>
+            {{r.email}} <br/>
+            {{r.type}} <br/>
+            {{r.city}}, {{r.country}}
+        </div>
+        <button (click)='acceptRequirements(r.username)'><i class="fa fa-check" aria-hidden="true" id="icon-check"></i></button>
+        <button (click)='refuseRequirements(r.username)'><i class="fa fa-times" aria-hidden="true" id="icon-cancle"></i></button>
+    </div>
+</div>
+<div class="admin-container" *ngIf='userChange'>
+    <div class="gallery" *ngFor='let r of arrayOfAcceptedUsers; let i = index'>
+        <img src='{{ "../../assets/uploads/users/" + r.imagePath}}'  alt="Cinque Terre" width="100" height="100">
+        <div class="desc">
+            {{r.firstName}} {{r.lastName}} <br/>
+            {{r.username}} <br/>
+            {{r.email}} <br/>
+            {{r.type}} <br/>
+            {{r.city}}, {{r.country}}
+        </div>
+        <button (click)='changeUser(r.username)'><i class="fa fa-pencil-square-o" aria-hidden="true" id="icon-update"></i></button>
+        <button (click)='deleteUser(r.username)'><i class="fa fa-trash" aria-hidden="true" id="icon-delete"></i></button>
+    </div>
+</div>
+<div class="changing-container" *ngIf='changing'>
+    <app-profile-update></app-profile-update>
+</div>
+<div class="setting-container" *ngIf='settings'>
+    <app-profile-update></app-profile-update>
+</div>
+<div class="signup-container" *ngIf='signupUser'>
+    <app-signup></app-signup>
+</div>
+<div class="signup-container" *ngIf='signupWorker'>
+    <app-signup></app-signup>
+</div>
+<div class="real-estate-signup" *ngIf='signUpRE'>
+    <app-real-estate-registration></app-real-estate-registration>
+</div>
+<div class="real-estate-requirements" *ngIf='requirementsRE'>
+    <app-real-estate-requirements></app-real-estate-requirements>
+</div>
+<div class="charts" *ngIf='charts'>
+    <app-charts></app-charts>
+</div>
+<div class="contracts" *ngIf='contactPage'>
+    <app-real-estate-income></app-real-estate-income>
+</div>
+<div class="percentage" *ngIf='percentagePage'>
+    <app-set-percentage></app-set-percentage>
+</div>
+<nav>
+    <ul>
+        <li><a (click)='home()'><i class="fa fa-home" aria-hidden="true" id="icon-home"></i><label>Početna </label></a></li>
+        <li><a (click)='setRequirements()'><i class="fas fa-user-clock" aria-hidden="true" id="icon-req"></i> <label> Zahtevi</label></a></li>
+        <li class="dropdown"><a> <i class="fa fa-user-plus" aria-hidden="true" id="icon-reg"></i> <label> Registracija <span>&rsaquo;</span></label></a>
+            <ul>
+                <li (click)='singUpUser()'><a>Obični korisnici</a></li>
+                <li (click)='signUpWorker()'><a>Radnici agencije</a></li>
+            </ul>
+        </li>
+        <li (click)='setChange()'><a><i class="fa fa-pencil" aria-hidden="true" id="icon-pencil"></i><label>Korisnici</label></a>
+        </li>
+        <li class="dropdown"><a><i class="fa fa-building-o" aria-hidden="true" id="icon-re"></i> <label> Nekretnine <span>&rsaquo;</span></label></a>
+            <ul>
+                <li (click)='signUpRealEstate()'><a>Registracija</a></li>
+                <li (click)='requirementsRealEstate()'><a>Zahtevi</a></li>
+                <li (click)='showCharts()'><a>Grafikoni</a></li>
+                <li (click)='contracts()'><a>Ugovori i prihodi</a></li>
+                <li (click)='percentage()'><a>Procenti</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a><img [src]="url" alt="" height="30px" width="30px"> <label>{{firstName}} <span>&rsaquo;</span></label></a>
+            <ul>
+                <li> <a (click)='setSettings()'> <i class="fa fa-cog" aria-hidden="true" id="icon-setting"></i> Podešavanja</a></li>
+                <li><a (click)='logout()'><i class="fa fa-sign-out" aria-hidden="true" id="icon-logout"></i> Odjavi se</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

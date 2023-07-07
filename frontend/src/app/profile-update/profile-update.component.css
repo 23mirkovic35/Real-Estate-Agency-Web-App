@@ -1,0 +1,67 @@
+.glass{
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.glass .image{
+    position: relative;
+    top:-50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 200px;
+}
+.glass .image img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    transition: all 1s ease;
+}
+.glass .image img:hover{
+    opacity: 0.6;
+}
+.glass input[type="checkbox"],
+.glass input[type="file"]{
+    display: none;
+}
+.glass label{
+    color: white;
+    cursor: pointer;
+}
+.glass .error{
+    color:red;
+    text-align: center;
+}
+.glass .change-pass,
+.glass .change-btn{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+.glass .change-pass:hover, 
+.glass .change-btn:hover{
+    background: white;
+    color: #2C5364;
+}
+.label{
+    text-align: center;
+    transition: all 1s ease;
+}
+.label:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+input{
+    width: 80%;
+}
+.basic{
+    margin-top: -30px;
+}
+button{
+    display: none;
+}

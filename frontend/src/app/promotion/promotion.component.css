@@ -1,0 +1,65 @@
+.container{
+    position: absolute;
+    bottom: 10%;
+    top: 150px;
+    right: 0;
+    left: 30px;
+    overflow: auto;
+}
+div.gallery {
+    margin: 5px;
+    float: left;
+    height: 300px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: 200px;
+    transition: all .4s ease;
+}
+  
+div.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+}
+.btn-promotion{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20%;
+    height: 20%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.btn-promotion:hover{
+    background: rgba(4, 143, 236, 0.6);
+}
+.btn-delete{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20%;
+    height: 20%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.btn-delete:hover{
+    background:rgba(165, 3, 3, 0.6) ;
+}
